@@ -47,7 +47,7 @@ public class NewBehaviourScript
     {
         for (int i = 0; i < Videos.Count; i++)
         {
-            Videos[i].UpdateClips();
+            Videos[i].MatchOffsetWithPrevious();
         }
     }
 
