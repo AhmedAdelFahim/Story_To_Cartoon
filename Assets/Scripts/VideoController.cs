@@ -34,6 +34,31 @@ public class NewBehaviourScript
         video.mixer = mixer;
         Videos.Add(video);
     }
-    
-    
+
+    public void UpdateClips()
+    {
+        for (int i = 0; i < Videos.Count; i++)
+        {
+            Videos[i].UpdateClips();
+        }
+    }
+
+    public void MatchOffsetsWithPrevious()
+    {
+        for (int i = 0; i < Videos.Count; i++)
+        {
+            Videos[i].UpdateClips();
+        }
+    }
+
+
+    public void Play()
+    {
+        PlayableGraph.Play();
+    }
+
+    public void Destroy()
+    {
+        PlayableGraph.Destroy();
+    }
 }
