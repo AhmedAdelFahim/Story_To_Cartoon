@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AnimationsClips.cs" />
+    <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\Video.cs" />
     <Compile Include="Assets\Scripts\VideoController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
