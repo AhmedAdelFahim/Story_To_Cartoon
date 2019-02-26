@@ -5,7 +5,11 @@ using UnityEngine;
 public class AnimationsClips : MonoBehaviour
 {
     public AnimationClip HumanIdle;
+
+
     public AnimationClip HumanWalking;
+
     public AnimationClip HumanJumping;
     public AnimationClip HumanDancing;
+
 }

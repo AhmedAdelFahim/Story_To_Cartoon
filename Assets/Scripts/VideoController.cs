@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Playables;
 
-public class NewBehaviourScript
+public class VideoController
 {
     private PlayableGraph PlayableGraph;
-    private List<Video> Videos;
+    private List<Video> Videos = new List<Video>();
     public void CreateVideo()
     {
         PlayableGraph = PlayableGraph.Create();

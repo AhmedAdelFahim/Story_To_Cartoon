@@ -10,30 +10,19 @@ public class Video
     private bool animation_finished = true; // This var will determine if the animation is finished
     private int m_CurrentClipIndex = -1;
     private float m_TimeToNextClip;
-    public Animator animator
-    {
-        get { return animator; }
-        set { animator = value; }
-    }
+    public Animator animator;
     private Vector3 currPos = Vector3.zero;
-  
+    public List<AnimationClip> Clips;
 
-    public AnimationMixerPlayable mixer
-    {
-        get { return mixer; }
-        set { mixer = value; }
-    }
+
+    public AnimationMixerPlayable mixer;
 
     public Video(Animator animator)
     {
         this.animator = animator;
+        //Clips = new List<AnimationClip>();
     }
 
-    public List<AnimationClip> Clips
-    {
-        get { return Clips; }
-        set { Clips = value; }
-    }
 
     /*
      * play next clip
@@ -59,10 +48,7 @@ public class Video
             if (m_CurrentClipIndex >= mixer.GetInputCount())
                 return;
             //m_CurrentClipIndex = 0;
-
             var currentClip = (AnimationClipPlayable) mixer.GetInput(m_CurrentClipIndex);
-            //currentClip.SetSpeed(2);
-
             // Reset the time so that the next clip starts at the correct position
             currentClip.SetTime(0);
             m_TimeToNextClip = currentClip.GetAnimationClip().length;

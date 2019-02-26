@@ -5,26 +5,55 @@ using UnityEngine;
 public class Test : MonoBehaviour
 {
     public Animator Animator;
+
+    private VideoController videoController;
+    public AnimationClip HumanIdle;
+    public AnimationClip HumanWalking;
+    public AnimationClip HumanJumping;
+    public AnimationClip HumanDancing;
+
     // Start is called before the first frame update
     void Start()
     {
-        AnimationsClips animationsClips = new AnimationsClips();
+        videoController = new VideoController();
+       // AnimationsClips animationsClips = new AnimationsClips();
         Video video = new Video(Animator);
-        video.Clips.Add(animationsClips.HumanWalking);
-        video.Clips.Add(animationsClips.HumanWalking);
-        video.Clips.Add(animationsClips.HumanWalking);
-        video.Clips.Add(animationsClips.HumanWalking);
-        video.Clips.Add(animationsClips.HumanDancing);
-        VideoController videoController = new VideoController();
+        List<AnimationClip> Clips = new List<AnimationClip>();
+        Clips.Add(HumanWalking);
+        Clips.Add(HumanWalking);
+        Clips.Add(HumanWalking);
+        Clips.Add(HumanWalking);
+        Clips.Add(HumanDancing);
+        Debug.Log(HumanWalking);
+        video.Clips = Clips;
         
         videoController.CreateVideo();
         
-        videoController.AddTrack();
+        videoController.AddTrack(video);
+        
+        videoController.Play();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //videoController.UpdateClips();
+    }
+
+    private void FixedUpdate()
+    {
+        videoController.UpdateClips();
+    }
+
+    private void LateUpdate()
+    {
         
+        videoController.MatchOffsetsWithPrevious();
+    }
+
+    private void OnDestroy()
+    {
+        videoController.Destroy();
     }
 }
