@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public Animator Animator;
-
+    //public Animator Animator;
+    
     private VideoController videoController;
+    
     public AnimationClip HumanIdle;
     public AnimationClip HumanWalking;
     public AnimationClip HumanJumping;
     public AnimationClip HumanDancing;
+    private InstantiateScene instantiateScene;
 
     // Start is called before the first frame update
     void Start()
     {
+       
+        instantiateScene = GetComponentInChildren<InstantiateScene>();
+        Animator instantiateSceneBelly = instantiateScene.iBelly.GetComponentInChildren<Animator>();
+       
+
         videoController = new VideoController();
        // AnimationsClips animationsClips = new AnimationsClips();
-        Track video = new Track(Animator);
+        Track track = new Track(instantiateSceneBelly);
         List<AnimationClip> Clips = new List<AnimationClip>();
         Clips.Add(HumanWalking);
         Clips.Add(HumanWalking);
@@ -25,11 +32,12 @@ public class Test : MonoBehaviour
         Clips.Add(HumanWalking);
         Clips.Add(HumanDancing);
         Debug.Log(HumanWalking);
-        video.Clips = Clips;
+        
+        track.Clips = Clips;
         
         videoController.CreateVideo();
         
-        videoController.AddTrack(video);
+        videoController.AddTrack(track);
         
         videoController.Play();
         
