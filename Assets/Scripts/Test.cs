@@ -17,7 +17,7 @@ public class Test : MonoBehaviour
     {
         videoController = new VideoController();
        // AnimationsClips animationsClips = new AnimationsClips();
-        Video video = new Video(Animator);
+        Track video = new Track(Animator);
         List<AnimationClip> Clips = new List<AnimationClip>();
         Clips.Add(HumanWalking);
         Clips.Add(HumanWalking);

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Playables;
 
-public class Video
+public class Track
 {
     private bool animation_started = false; // This var will determine if the animation is finished
     private bool animation_finished = true; // This var will determine if the animation is finished
@@ -13,11 +13,12 @@ public class Video
     public Animator animator;
     private Vector3 currPos = Vector3.zero;
     public List<AnimationClip> Clips;
+    
 
 
     public AnimationMixerPlayable mixer;
 
-    public Video(Animator animator)
+    public Track(Animator animator)
     {
         this.animator = animator;
         //Clips = new List<AnimationClip>();
