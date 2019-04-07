@@ -31,7 +31,7 @@ public class Test : MonoBehaviour
         Clips.Add(HumanWalking);
         Clips.Add(HumanWalking);
         Clips.Add(HumanDancing);
-        Debug.Log(HumanWalking);
+        //Debug.Log(HumanWalking);
         
         track.Clips = Clips;
         

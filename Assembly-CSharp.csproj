@@ -57,11 +57,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\InstantiateScene.cs" />
+    <Compile Include="Assets\RoadTool\Scripts\Road.cs" />
+    <Compile Include="Assets\RoadTool\Scripts\RoadMath.cs" />
+    <Compile Include="Assets\RoadTool\Scripts\RoadUtils.cs" />
     <Compile Include="Assets\Scripts\AnimationsClips.cs" />
+    <Compile Include="Assets\Scripts\InstantiateScene.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\Track.cs" />
     <Compile Include="Assets\Scripts\VideoController.cs" />
+    <None Include="Assets\Rune Assets\Simple\Urban Buildings Pack 1\runesimple.shader" />
+    <None Include="Assets\RoadTool\Texture\Texture Credits.txt" />
+    <None Include="Assets\RoadTool\README.txt" />
+    <None Include="Assets\RoadTool\Example\Standard Assets\Skyboxes\_skybox info.txt" />
     <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Surface-Offset.shader" />
     <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D - Unity 5 Standard.shader" />
     <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D - Unity 5 StandardSpecular.shader" />
@@ -646,16 +653,6 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Unity.PlayableGraphVisualizer.csproj">
-      <Project>{0FA2E345-96D9-F193-7191-1E4606FE7F9C}</Project>
-      <Name>Unity.PlayableGraphVisualizer</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PlayableGraphVisualizer.Editor.csproj">
-      <Project>{7CE7612B-18CD-16F5-2C15-A449CEDAA598}</Project>
-      <Name>Unity.PlayableGraphVisualizer.Editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
